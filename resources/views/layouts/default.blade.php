@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
         @include('includes.head')
-        @include('includes.header')
 </head>
 <body>
-<div class="container">
+<header>
+    @include('includes.header')
+</header>
+<div class="container" style="margin-top: 50px">
 
-    <main role="main">
-        @yield('content')
-    </main>
+
+    <div id="main" class="row">
+
+        <div id="sidebar" class="col-md-2">
+            @include('includes.sidebar')
+        </div>
+
+        <div id="content" class="col-md-8">
+            @yield('content')
+        </div>
+
+    </div>
 </div>
-<footer class="container-fluid bg-dark text-white text-justify">
+<footer class="row">
     <div class="container">
         @include('includes.footer')
     </div>
